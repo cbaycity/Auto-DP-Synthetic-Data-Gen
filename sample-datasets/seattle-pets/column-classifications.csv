@@ -1,0 +1,8 @@
+column,categorical
+animal_s_name, "N/A"
+license_issue_date, "N/A"
+license_number, "numeric"
+primary_breed, "N/A"
+secondary_breed, "N/A"
+species, "N/A"
+zip_code, "categorical"
