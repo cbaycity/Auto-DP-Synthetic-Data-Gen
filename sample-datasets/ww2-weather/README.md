@@ -6,7 +6,6 @@ The `Summary of Weather.csv` file in the Weather Conditions in World War Two Kag
 # Columns to evaluate:
 | Column | Classification |
 | ------ | -------------- |
-| column |categorical|
 | STA | "categorical"|
 | YR | "categorical"|
 | MO | "categorical"|
