@@ -15,3 +15,5 @@ def collect_datasets() -> dict[str, pl.DataFrame]:
     return result
 
 collect_datasets()
+for dataset, df in collect_datasets().items():
+    print(f"Dataset: {dataset}, df: {df}")
