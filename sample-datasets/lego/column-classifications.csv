@@ -1,1 +1,6 @@
 column,categorical
+set_num,"N/A"
+name,"N/A"
+year,"categorical"
+theme_id,"categorical"
+num_parts,"numeric"

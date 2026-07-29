@@ -1,1 +1,12 @@
 column,categorical
+"","categorical"
+name,"N/A"
+Gender,"N/A"
+"Eye color","N/A"
+Race,"N/A"
+"Hair color","N/A"
+Height,"numeric"
+Publisher,"N/A"
+"Skin color","N/A"
+Alignment,"N/A"
+Weight,"numeric"
