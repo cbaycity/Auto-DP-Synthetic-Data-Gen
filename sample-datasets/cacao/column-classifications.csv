@@ -2,16 +2,16 @@ column,categorical
 "Company 
 (Maker-if known)", "N/A"
 "Specific Bean Origin
-or Bar Name", "N/A",
-REF, "numeric",
+or Bar Name", "N/A"
+REF, "numeric"
 "Review
-Date", "N/A",
+Date", "N/A"
 "Cocoa
-Percent", "numeric",
+Percent", "numeric"
 "Company
-Location", "N/A",
-Rating, "numeric",
+Location", "N/A"
+Rating, "numeric"
 "Bean
-Type", "N/A",
+Type", "N/A"
 "Broad Bean
 Origin", "N/A"

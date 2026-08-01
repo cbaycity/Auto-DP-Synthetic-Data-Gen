@@ -15,5 +15,5 @@ MAX, "numeric"
 MIN, "numeric"
 MEA, "numeric"
 SNF, "numeric"
-SND, "numeric", 
+SND, "numeric"
 TSHDSBRSGF, "categorical"
