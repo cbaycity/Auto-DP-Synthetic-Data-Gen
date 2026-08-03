@@ -5,6 +5,8 @@ import polars as pl
 from typing import NamedTuple
 import opendp.prelude as dp
 
+dp.enable_features("contrib")
+
 
 class DPResult(NamedTuple):
     total_count: int
@@ -29,7 +31,7 @@ def calculate_values(
     """
 
     context = dp.Context.compositor(
-        data=dataset,
+        data=dataset.lazy(),
         privacy_unit=dp.unit_of(contributions=1),
         privacy_loss=dp.loss_of(
             epsilon=(count_budget + per_column_budget * len(dataset.columns))
@@ -43,9 +45,12 @@ def calculate_values(
     result = DPResult(count_result[0, 0], {})
 
     for column in dataset.columns:
-        distinct_query = context.query(epsilon=per_column_budget).select(
-            pl.col(column).dp.n_unique()
+        distinct_query = (
+            context.query(epsilon=per_column_budget)
+            .select(pl.col(column).dp.n_unique())
+            .release()
+            .collect()[0, 0]
         )
-        result.column_counts[column] = distinct_query.release()[0, 0]
+        result.column_counts[column] = distinct_query
 
     return result
