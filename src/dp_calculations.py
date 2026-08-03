@@ -10,9 +10,11 @@ dp.enable_features("contrib")
 FLOAT_INTOLERANCE_BUFFER = 1 + 1e-5
 """A small number to multiple the total context epsilon by to ensure it doesn't run out of budget given floating point imprecision."""
 
+
 class DPResult(NamedTuple):
     total_count: int
     column_counts: dict[str, int]
+
 
 def calculate_values(
     dataset: pl.DataFrame,
@@ -35,7 +37,10 @@ def calculate_values(
         data=dataset.lazy(),
         privacy_unit=dp.unit_of(contributions=1),
         privacy_loss=dp.loss_of(
-            epsilon=((count_budget + per_column_budget * len(dataset.columns))*FLOAT_INTOLERANCE_BUFFER)
+            epsilon=(
+                (count_budget + per_column_budget * len(dataset.columns))
+                * FLOAT_INTOLERANCE_BUFFER
+            )
         ),
     )
 
