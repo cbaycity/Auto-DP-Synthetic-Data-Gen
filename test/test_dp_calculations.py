@@ -3,7 +3,7 @@
 import polars as pl
 import numpy as np
 import pytest
-from src.dp_calculations import calculate_values
+from preprocess.dp_calculations import calculate_values
 
 
 LARGE_EPSILON = 1_000

@@ -4,7 +4,7 @@ import polars as pl
 import os
 
 SAMPLE_DATASETS_DIR = os.path.join(
-    os.path.dirname(os.path.dirname(__file__)), "sample-datasets"
+    os.path.dirname(os.path.dirname(os.path.dirname(__file__))), "sample-datasets"
 )
 DATASET_DIRS = [
     d
@@ -22,8 +22,3 @@ def collect_datasets() -> dict[str, pl.DataFrame]:
             os.path.join(SAMPLE_DATASETS_DIR, dataset, "data.csv")
         )
     return result
-
-
-# collect_datasets()
-# for dataset, df in collect_datasets().items():
-#    print(f"Dataset: {dataset}, df: {df}")

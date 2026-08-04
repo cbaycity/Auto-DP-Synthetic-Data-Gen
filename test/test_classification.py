@@ -1,7 +1,7 @@
 """Tests that the classification frameworks operate as expected."""
 
-from src.classification import threshold_calc
-from src.dp_calculations import DPResult
+from preprocess.classification import threshold_calc
+from preprocess.dp_calculations import DPResult
 import pytest
 
 

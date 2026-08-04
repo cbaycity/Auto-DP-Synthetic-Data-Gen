@@ -1,8 +1,8 @@
 """Has methods to calculate"""
 
 from frozendict import frozendict
-from data_reader import DATASET_DIRS, SAMPLE_DATASETS_DIR
-from dp_calculations import calculate_values
+from preprocess.data_reader import DATASET_DIRS, SAMPLE_DATASETS_DIR
+from preprocess.dp_calculations import calculate_values
 import polars as pl
 import os
 

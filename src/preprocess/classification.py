@@ -1,6 +1,6 @@
 """Methods to classify if a column is categorical or continuous."""
 
-from src.dp_calculations import DPResult
+from preprocess.dp_calculations import DPResult
 
 
 def threshold_calc(dataset_info: DPResult, threshold: float = 0.05) -> dict[str, str]:
