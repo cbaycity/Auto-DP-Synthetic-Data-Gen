@@ -3,7 +3,7 @@
 from src.dp_calculations import DPResult
 
 
-def threshold_calc(dataset_info: DPResult, threshold: float = 0.05) -> dict[str, bool]:
+def threshold_calc(dataset_info: DPResult, threshold: float = 0.05) -> dict[str, str]:
     """Calculates if a variable is categorical based on thresholding.
 
     Args:
@@ -12,6 +12,7 @@ def threshold_calc(dataset_info: DPResult, threshold: float = 0.05) -> dict[str,
     """
     result = {}
     for column, count in dataset_info.column_counts.items():
-        result[column] = True if threshold * dataset_info.total_count > count else False
-
+        result[column] = (
+            "categorical" if threshold * dataset_info.total_count > count else "numeric"
+        )
     return result

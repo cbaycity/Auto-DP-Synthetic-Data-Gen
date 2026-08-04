@@ -18,7 +18,7 @@ import pytest
                     "C": 91,
                 },
             ),
-            {"A": True, "B": False, "C": False},
+            {"A": "categorical", "B": "numeric", "C": "numeric"},
         ),
         (
             0.9,
@@ -30,7 +30,7 @@ import pytest
                     "C": 91,
                 },
             ),
-            {"A": True, "B": True, "C": False},
+            {"A": "categorical", "B": "categorical", "C": "numeric"},
         ),
     ],
 )
