@@ -25,7 +25,6 @@ def get_correct_answers() -> frozendict:
         classifications_path = os.path.join(
             SAMPLE_DATASETS_DIR, dataset, COL_CLASSIFICATION_PATH
         )
-        print(classifications_path)
         classifications = pl.read_csv(classifications_path)
         for i in range(len(classifications)):
             correct_answers[(dataset, classifications[i, COL])] = classifications[

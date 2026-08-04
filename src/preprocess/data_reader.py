@@ -17,8 +17,8 @@ def collect_datasets() -> dict[str, pl.DataFrame]:
     """Reads the sample datasets into a dict of Polars Dataframes."""
     result = {}
     for dataset in DATASET_DIRS:
-        print(f"Dataset: {os.path.join(SAMPLE_DATASETS_DIR, dataset, 'data.csv')}")
         result[dataset] = pl.read_csv(
-            os.path.join(SAMPLE_DATASETS_DIR, dataset, "data.csv")
+            os.path.join(SAMPLE_DATASETS_DIR, dataset, "data.csv"),
+            infer_schema_length=100_000
         )
     return result
