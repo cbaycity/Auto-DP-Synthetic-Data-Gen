@@ -16,3 +16,6 @@ def threshold_calc(dataset_info: DPResult, threshold: float = 0.05) -> dict[str,
             "categorical" if threshold * dataset_info.total_count > count else "numeric"
         )
     return result
+
+def log_threshold():
+    """Calculates if a variable is categorical with a threshold that """

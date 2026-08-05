@@ -35,7 +35,7 @@ def get_correct_answers() -> frozendict:
 
 
 def classification_accuracy(
-    correct_answers: frozendict, predictions: dict
+    correct_classifications: frozendict, predictions: dict
 ) -> (int, int):
     """Returns an accuracy score comparing the predictions to the correct answers.
 
@@ -52,9 +52,10 @@ def classification_accuracy(
     total_columns = 0
     correct_answers = 0
     for key in predictions.keys():
-        total_columns += 1
-        if predictions[key] == correct_answers[key]:
-            correct_answers += 1
+        if correct_classifications[key] != "N/A":
+            total_columns += 1
+            if predictions[key] == correct_classifications[key]:
+                correct_answers += 1
 
     return (total_columns, correct_answers)
 

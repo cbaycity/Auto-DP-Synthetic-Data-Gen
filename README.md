@@ -8,8 +8,3 @@ This repository exists to help create a differentially private (DP) library that
 
 # Dataset Overview:
 The sample datasets were selected from their inclusion in the Towards Feature Type Inference Benchmarking study and subsquent AutoML benchmark [library](https://github.com/vraj-ucsd/ML-Data-Prep-Zoo/blob/master/MLFeatureTypeInference/Benchmark-Labeled-Data/Metadata/meta_data.csv).
-
-# Columns to Classify:
-| Type | Count In Sample Datasets |
-| Categorical | 7 |
-| Numeric | 17 |
