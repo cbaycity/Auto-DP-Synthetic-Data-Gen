@@ -1,0 +1,1 @@
+Dataset Source - Kaggle: https://www.kaggle.com/datasets/lislejoem/us-minimum-wage-by-state-from-1968-to-2017
